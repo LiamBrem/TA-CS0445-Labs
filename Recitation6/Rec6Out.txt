@@ -1,0 +1,20 @@
+Joey DeeDee Johnny Tommy 
+Removed: Joey
+Removed: DeeDee
+Removed: Johnny
+Removed: Tommy
+List has length: 0
+Nigel Frank Clem Jimmy Chris Debbie 
+Nigel is in the band!
+Debbie is in the band!
+Chrissie is not in the band!
+Removed: Debbie
+Debbie is not in the band!
+Chris is in the band!
+Nigel Frank Clem Jimmy Chris 
+Removed: Chris
+Removed: Jimmy
+Removed: Clem
+Removed: Frank
+Removed: Nigel
+List has length: 0

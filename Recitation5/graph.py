@@ -88,10 +88,37 @@ def plot_string_vs_sb(ax):
     ax.legend(ncol=2, fontsize=9)
 
 
+def plot_total_time_string_vs_sb(ax):
+    for op in COMPARE_OPS:
+        string_per_op = STRING_DATA_NS_PER_OP[op][: len(N_VALUES)]
+        sb_per_op = DATA_NS_PER_OP["Assig2BSB"][op]
+        string_total = [n * t for n, t in zip(N_VALUES, string_per_op)]
+        sb_total = [n * t for n, t in zip(N_VALUES, sb_per_op)]
+        ax.plot(
+            N_VALUES,
+            string_total,
+            marker="o",
+            linewidth=2,
+            label=f"String {OP_LABELS[op]}",
+        )
+        ax.plot(
+            N_VALUES,
+            sb_total,
+            marker="s",
+            linewidth=2,
+            label=f"SB {OP_LABELS[op]}",
+        )
+    ax.set_title("String vs SB total time (common N)")
+    ax.set_xlabel("N")
+    ax.set_ylabel("Total time (ns)")
+    ax.grid(True, linestyle="--", alpha=0.4)
+    ax.legend(ncol=2, fontsize=9)
+
+
 def main():
     fig, ax = plt.subplots(1, 1, figsize=(7, 5))
-    plot_string_vs_sb(ax)
-    fig.suptitle("String vs SB", fontsize=14)
+    plot_total_time_string_vs_sb(ax)
+    fig.suptitle("Total time: String vs SB", fontsize=14)
     fig.tight_layout()
     plt.show()
 
