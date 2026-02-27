@@ -186,6 +186,8 @@ public class DLListRec<T> implements ListInterface<T> {
          return false;
       }
 
+      // 1 -> 2 -> 3 -> 4 -> 1
+
       return (curr.getData().equals(target) || containsRec(curr.getNextNode(), target, start));
 
    }
@@ -232,6 +234,8 @@ public class DLListRec<T> implements ListInterface<T> {
       if (currPos == targetPos){
          return curr;
       }
+
+      // 1 - 2 - 3 - 4 - 1
 
       return getNodeAtRec(currPos + 1, targetPos, curr.getNextNode());
 

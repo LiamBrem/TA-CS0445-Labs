@@ -1,0 +1,13 @@
+Please enter size of array: 
+1000000
+How many searches to try?: 
+1000000
+Enter 1 for iterative or 2 for recursive: 
+1
+Please enter a seed: 
+1234
+Data loaded
+Iterative Binary Search: 
+    Total time: 124080292
+    Ave. time: 124.080292
+    Found: 10003 out of 1000000
