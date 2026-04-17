@@ -16,8 +16,7 @@ public class Rec10 {
 		String[] B = new String[size];
 
 		for (int i = 0; i < A.length; i++) {
-			// String curr = StringHelp.randWord(len); // remove
-			// Stringhelp & just make method
+			// String curr = StringHelp.randWord(len); // remove StringHelp
 			String curr = randWord(len);
 			String curr2 = new String(curr);
 			A[i] = curr;
